@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "7b26b982-b600-4327-84aa-2b08e4278ea2",
+		"name": "GatewayTask",
+		"description": "This is the postman collection for running the Gateway Restful APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Gateways",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gateways",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gateways"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GatewayById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gateway/1762235874",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gateway",
+						"1762235874"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Peripheral",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\": 17,\r\n    \"vendor\": \"Elec.\",\r\n    \"status\": \"online\",\r\n    \"gateway\": {\"serial\": \"1705835874\"}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gateway/peripheral",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gateway",
+						"peripheral"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial\": \"11122897\",\r\n    \"name\": \"My Gateway\",\r\n    \"ipv4\": \"192.168.1.111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gateway",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
